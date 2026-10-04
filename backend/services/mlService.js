@@ -1,4 +1,7 @@
-const ML_SERVICE_URL = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+const configuredMLServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+const ML_SERVICE_URL = configuredMLServiceUrl.startsWith('http')
+  ? configuredMLServiceUrl.replace(/\/+$/, '')
+  : `https://${configuredMLServiceUrl.replace(/\/+$/, '')}`;
 
 async function callMLService(path, payload = null) {
   const url = `${ML_SERVICE_URL}${path}`;
