@@ -1,0 +1,80 @@
+{
+  "best_model": "Random Forest",
+  "results": {
+    "Logistic Regression": {
+      "accuracy": 0.8806,
+      "precision": 0.8841,
+      "recall": 0.8806,
+      "f1_score": 0.8804,
+      "confusion_matrix": [
+        [
+          124,
+          4,
+          13
+        ],
+        [
+          7,
+          74,
+          10
+        ],
+        [
+          8,
+          1,
+          119
+        ]
+      ],
+      "cv_score": 0.8882
+    },
+    "Decision Tree": {
+      "accuracy": 0.7972,
+      "precision": 0.7992,
+      "recall": 0.7972,
+      "f1_score": 0.797,
+      "confusion_matrix": [
+        [
+          117,
+          10,
+          14
+        ],
+        [
+          12,
+          74,
+          5
+        ],
+        [
+          21,
+          11,
+          96
+        ]
+      ],
+      "cv_score": 0.7658
+    },
+    "Random Forest": {
+      "accuracy": 0.8972,
+      "precision": 0.8986,
+      "recall": 0.8972,
+      "f1_score": 0.8974,
+      "confusion_matrix": [
+        [
+          129,
+          4,
+          8
+        ],
+        [
+          6,
+          81,
+          4
+        ],
+        [
+          14,
+          1,
+          113
+        ]
+      ],
+      "cv_score": 0.8827
+    }
+  },
+  "training_records": 1440,
+  "testing_records": 360,
+  "last_trained": "2026-10-04T19:10:37.650649"
+}
