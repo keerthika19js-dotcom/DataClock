@@ -176,7 +176,7 @@ function DashboardPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-sm font-semibold text-slate-800">{item.daysRemaining} days</div>
-                    <StatusBadge status={item.daysRemaining <= 7 ? 'EXPIRING SOON' : 'ACTIVE'} />
+                    <StatusBadge status={item.daysRemaining < 0 ? 'EXPIRED' : item.daysRemaining <= 7 ? 'EXPIRING SOON' : 'ACTIVE'} />
                   </div>
                 </div>
               ))}
