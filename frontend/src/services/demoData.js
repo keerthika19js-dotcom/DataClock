@@ -38,8 +38,8 @@ function createRecord(index) {
   const riskScore = Math.min(100, Math.max(10, Math.round(
     sensitivity * 12 + ageDays * 0.08 + (purposeCompleted ? 18 : 0) + (usageFrequency === 'None' ? 15 : 4),
   )));
-  const status = statusFromExpiry(expiryDate);
-  const mlPrediction = status === 'EXPIRED' ? 'EXPIRE' : riskScore >= 70 ? 'REVIEW' : 'RETAIN';
+  const status = 'ACTIVE';
+  const mlPrediction = riskScore >= 70 ? 'REVIEW' : 'RETAIN';
 
   return {
     _id: `demo-${String(index).padStart(5, '0')}`,
