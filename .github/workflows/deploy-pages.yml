@@ -36,7 +36,7 @@ jobs:
         run: npm run build
         working-directory: frontend
         env:
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
+          VITE_API_URL: ${{ vars.VITE_API_URL || 'https://dataclock-api.onrender.com/api' }}
           GITHUB_ACTIONS: 'true'
       - name: Configure Pages
         uses: actions/configure-pages@v5
